@@ -20,6 +20,9 @@ class: ipython-title
 
 Ilhan Polat - @ilayn · Paris, November 2026 {.absolute .inset-x-0 .bottom-10}
 
+<!-- QR code for https://ilayn.github.io/talks/2026ComputeParis/, made with segno (dark modules on Nord's light background, 4-module margin) -->
+![QR code linking to these slides](/figures/slides-qr.svg){.absolute .bottom-6 .right-8 .w-40 .rounded-md}
+
 <!--
 Thank you everyone, it is really exciting to be here, since I do not code for a living and I have been outside the research circles for quite a while. Hence I truly appreciate the opportunity.
 
@@ -714,3 +717,21 @@ Pairwise distances; everyone here has written this. Two lines: a matrix product,
 That's why we need a lower-level language whose compiler can do this for us, instead of trying to influence the hardware from the outside through a gazillion different libraries. Finding the best fusion in general is NP-hard, but any improvement is an improvement.
 -->
 
+
+---
+layout: center
+---
+
+<div class="flex flex-col items-center">
+
+# Thank you
+
+![QR code linking to these slides](/figures/slides-qr.svg){.w-64 .mt-6 .rounded-lg}
+
+[ilayn.github.io/talks/2026ComputeParis](https://ilayn.github.io/talks/2026ComputeParis/) {.mt-4}
+
+</div>
+
+<!--
+Thank you. The slides are online; the QR code takes you there. Happy to take questions.
+-->
