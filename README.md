@@ -1,4 +1,4 @@
-# BLAS talk
+# from hardware import linalg
 
 Slides built with [Slidev](https://sli.dev). Requires Node >= 22.22.
 
