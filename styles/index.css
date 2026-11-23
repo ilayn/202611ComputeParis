@@ -1,28 +1,5 @@
-/* Global styles, loaded on every slide. Per-slide styles go in a <style> block inside that slide.
+/* Global styles, loaded on every slide. Prefer the theme's own styling; add rules here only when it has no equivalent.
    Colours come from the nord theme's palette variables (--frost0..3, --red, --yellow, ...). */
-
-/* Title slide: the talk title set as a line of Python, coloured like Nord's syntax highlighting */
-.slidev-layout.cover h1 {
-  font-family: 'Fira Code', ui-monospace, monospace;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--slidev-text);
-}
-
-.slidev-layout.cover .kw {
-  color: var(--frost2);
-}
-
-.light .slidev-layout.cover .kw {
-  color: var(--frost3);
-}
-
-.byline {
-  margin-top: 3rem;
-  font-size: 1.1rem;
-  color: var(--slidev-text-lighter);
-  opacity: 0.7;
-}
 
 /* Placeholder that must be filled in before the talk */
 .todo {
@@ -31,4 +8,47 @@
   background: var(--yellow);
   color: var(--dark0);
   font-style: italic;
+}
+
+/* Title slide: the title as an IPython input line, in IPython's default colours mapped to Nord's terminal palette.
+   Turned on with `class: ipython-title` in the slide's frontmatter.
+   The selector needs .slidev-layout.cover to outrank the theme's own cover heading size. */
+.slidev-layout.cover.ipython-title h1 {
+  font-family: var(--slidev-code-font-family);
+  font-size: 2rem; /* the whole prompt line must fit on one line in a monospace font */
+  font-weight: 400;
+  white-space: nowrap;
+  color: var(--light2);
+}
+
+.ipython-title h1 .prompt {
+  color: var(--green);
+}
+
+.ipython-title h1 .num,
+.ipython-title h1 .kw {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.ipython-title h1 .mod {
+  color: var(--frost2);
+  font-weight: 700;
+}
+
+.ipython-title h1 .cursor {
+  display: inline-block;
+  width: 0.6em; /* one character cell */
+  height: 1.2em;
+  margin-left: 0.6em; /* the space before the cursor */
+  vertical-align: -0.25em;
+  background: var(--light2);
+}
+
+/* Light mode: Nord's terminal green is unreadable on the light background, so draw the line on a terminal-coloured panel */
+.light .ipython-title h1 {
+  justify-self: center;
+  padding: 0.5em 0.8em;
+  border-radius: 0.3em;
+  background: var(--dark0);
 }
