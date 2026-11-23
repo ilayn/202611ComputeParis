@@ -1,0 +1,34 @@
+/* Global styles, loaded on every slide. Per-slide styles go in a <style> block inside that slide.
+   Colours come from the nord theme's palette variables (--frost0..3, --red, --yellow, ...). */
+
+/* Title slide: the talk title set as a line of Python, coloured like Nord's syntax highlighting */
+.slidev-layout.cover h1 {
+  font-family: 'Fira Code', ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--slidev-text);
+}
+
+.slidev-layout.cover .kw {
+  color: var(--frost2);
+}
+
+.light .slidev-layout.cover .kw {
+  color: var(--frost3);
+}
+
+.byline {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: var(--slidev-text-lighter);
+  opacity: 0.7;
+}
+
+/* Placeholder that must be filled in before the talk */
+.todo {
+  padding: 0 0.4em;
+  border-radius: 0.25em;
+  background: var(--yellow);
+  color: var(--dark0);
+  font-style: italic;
+}
